@@ -1,0 +1,88 @@
+service.url:
+  ATG_SERVICE_URL:
+    url.hostname: test.atg.com
+    url.ssl.enabled: false
+    url.port: 80
+    url.resource.path: /direct/rest/price/
+    url.proxy:
+      proxy.url: http://proxy.com
+      proxy.username: test
+      proxy.password: test
+    url.query.params:
+      format: standard
+    url.path.params:
+      sku.key: sku
+  ATG_SERVICE_URL_NO_PROXY:
+    url.hostname: test.noproxy.atg.com
+    url.ssl.enabled: false
+    url.port: 80
+    url.resource.path: /direct/rest/price/
+    url.query.params:
+      format: standard
+    url.path.params:
+      sku.key: sku
+  PRODUCT_SERVICE_CATID_LOOKUP:
+    url.hostname: test.product.com
+    url.ssl.enabled: false
+    url.port: 80
+    url.resource.path: /v2
+    url.query.params:
+      clientid: trn:test:cid:02f2907f-bf7e-4ddd-ab9d-74b406cd9fe0
+    url.query.params.list:
+      fields:
+      -
+        statusInfo
+      -  
+        catId
+    url.properties:
+      url.query.limit: 5
+  TEST_POST:
+    url.hostname: localhost
+    url.ssl.enabled: false
+    url.port: 8080
+    url.resource.path: /rewards/json     
+  TEST_PUT:
+    url.hostname: localhost
+    url.ssl.enabled: false
+    url.port: 8080
+    url.resource.path: /rewards
+    url.path.params:
+      json.key: json
+  TEST_HTTPS_GET:
+    url.hostname: sheetsu.com
+    url.ssl.enabled: true
+    url.port: 443
+    url.resource.path: /apis/v1.0/
+    url.path.params:
+      apiId: 45c9bbb23584
+      key: Shortname
+  DISPLAY_DATA_AUTH_URL:
+    url.hostname: test.dispdata.com
+    url.ssl.enabled: false
+    url.port: 80
+    url.resource.path: /API/api/access
+    url.properties:
+      basicauth.uid: test@localhost.com
+      basicauth.pwd: xxxxxxx
+  PRODUCT_SERVICE_CATID_LOOKUP_FOR_V3:
+      url.hostname: test.prodcat.com
+      url.ssl.enabled: false
+      url.oauth.enabled: true
+      url.port: 80
+      url.resource.path: /v3
+      url.query.params:
+        clientid: trn:test:cid:788b2690-67f4-4ba2-afa0-bcce4a1e24cd:d6a132b3-5259-41d4-9e67-fbb32af87139
+      url.properties:
+        url.query.limit: 5
+  IDENTITY_SERVICE_TOKEN_EXTRA:
+      url.hostname: test.identity.com
+      url.ssl.enabled: true
+      url.resource.path: /v3/api/auth/oauth/v2/token
+      url.proxy:
+        proxy.url: http://testproxy.com:80
+      url.properties:
+        client_id: trn:test:cid:788b2690-67f4-4ba2-afa0-bcce4a1e24cd:d6a132b3-5259-41d4-9e67-fbb32af87139
+        grant_type: testpass
+        scope: oob
+        username: testuidb
+        password: testpass
