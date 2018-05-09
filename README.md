@@ -1,6 +1,9 @@
 # RestApiClient
 Java client(Android friendly) for CRUD operations on REST API.
 
+# Versions on maven
+https://mvnrepository.com/artifact/com.github.itzmedinesh/rest-api-client
+
 # Sample YAML configuration
 ***********************************
 ```html
