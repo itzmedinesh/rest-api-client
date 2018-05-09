@@ -2,7 +2,7 @@
 Java client(Android friendly) for CRUD operations on REST API.
 
 # Versions on maven
-https://mvnrepository.com/artifact/com.github.itzmedinesh/rest-api-client
+http://central.maven.org/maven2/com/github/itzmedinesh/rest-api-client/
 
 # Sample YAML configuration
 ***********************************
