@@ -18,9 +18,15 @@ public class ServiceClientUtils {
 	/**
 	 * Adds query parameters to the REST API web target
 	 * 
+	 * @param <M>
+	 *            - M is of type 'String' for single valued query parameter and type
+	 *            'List' for multi-valued query parameters
+	 * 
 	 * @param queryParams
+	 *            - map of query parameters
 	 * @param restResource
-	 * @return
+	 *            - jersey web target
+	 * @return WebTarget - web target with query parameters appended
 	 */
 	@SuppressWarnings("rawtypes")
 	public static <M> WebTarget addQueryParameters(Map<String, M> queryParams, WebTarget restResource) {
@@ -44,8 +50,10 @@ public class ServiceClientUtils {
 	 * Adds path parameters to the REST API web target
 	 * 
 	 * @param pathParams
+	 *            - map of query parameters
 	 * @param restResource
-	 * @return
+	 *            - jersey web target
+	 * @return WebTarget - web target with path parameters appended
 	 */
 	public static WebTarget addPathParameters(Map<String, String> pathParams, WebTarget restResource) {
 		Iterator<String> pathParamIter = pathParams.keySet().iterator();
